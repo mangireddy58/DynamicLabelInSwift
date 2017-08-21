@@ -15,6 +15,7 @@ class DynamicHeightViewController: UIViewController {
         super.viewDidLoad()
 
         let str:String = "weiyuryeiwu cdhskjdhkd uhewriwhqidi ihdiuwediuhewi hdiuehiuhdweui weiyuryeiwu cdhskjdhkd uhewriwhqidi ihdiuwediuhewi hdiuehiuhdweui weiyuryeiwu cdhskjdhkd uhewriwhqidi ihdiuwediuhewi hdiuehiuhdweui weiyuryeiwu cdhskjdhkd uhewriwhqidi ihdiuwediuhewi hdiuehiuhdweui"
+        
         self.dynamicLabel.text = String(format: "%@", str)
         let maximumLabelSize = CGSize(width:self.dynamicLabel.frame.size.width, height:CGFloat(Float.greatestFiniteMagnitude))
         let textRect = str.boundingRect(with:maximumLabelSize, options: [.usesLineFragmentOrigin], attributes: [NSFontAttributeName: self.dynamicLabel.font], context: nil)
