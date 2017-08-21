@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V47-lu-DD2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dynamic Height View Controller-->
+        <scene sceneID="LQo-44-r5a">
+            <objects>
+                <viewController id="V47-lu-DD2" customClass="DynamicHeightViewController" customModule="DynamicLabelHeightSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cbo-VN-i1a"/>
+                        <viewControllerLayoutGuide type="bottom" id="mbW-bK-Uth"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MPh-0M-A6P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOl-Kc-MFB">
+                                <rect key="frame" x="16" y="28" width="343" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH5-As-VDA">
+                                        <rect key="frame" x="8" y="5" width="327" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="R3V-Ot-weA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.26787166569999998" green="0.81613221439999994" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gH5-As-VDA" secondAttribute="trailing" constant="8" id="2HW-dr-OU8"/>
+                                    <constraint firstItem="gH5-As-VDA" firstAttribute="leading" secondItem="VOl-Kc-MFB" secondAttribute="leading" constant="8" id="TKL-uP-vnw"/>
+                                    <constraint firstItem="gH5-As-VDA" firstAttribute="top" secondItem="VOl-Kc-MFB" secondAttribute="top" constant="5" id="bu7-WW-mTE"/>
+                                    <constraint firstAttribute="bottom" secondItem="gH5-As-VDA" secondAttribute="bottom" constant="5" id="g48-44-jbV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alo-H8-4hY">
+                                <rect key="frame" x="16" y="85" width="343" height="35.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="alo-H8-4hY" secondAttribute="height" multiplier="48:5" id="KTQ-rY-wkr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VOl-Kc-MFB" secondAttribute="trailing" constant="16" id="35a-m5-46C"/>
+                            <constraint firstAttribute="trailing" secondItem="alo-H8-4hY" secondAttribute="trailing" constant="16" id="Muf-gF-72e"/>
+                            <constraint firstItem="VOl-Kc-MFB" firstAttribute="top" secondItem="cbo-VN-i1a" secondAttribute="bottom" constant="8" id="MyA-AJ-tDM"/>
+                            <constraint firstItem="VOl-Kc-MFB" firstAttribute="centerX" secondItem="MPh-0M-A6P" secondAttribute="centerX" id="UzY-Hd-aBR"/>
+                            <constraint firstItem="alo-H8-4hY" firstAttribute="top" secondItem="VOl-Kc-MFB" secondAttribute="bottom" constant="17" id="Z72-7k-itl"/>
+                            <constraint firstItem="alo-H8-4hY" firstAttribute="leading" secondItem="MPh-0M-A6P" secondAttribute="leading" constant="16" id="eJK-wb-UDD"/>
+                            <constraint firstItem="VOl-Kc-MFB" firstAttribute="leading" secondItem="MPh-0M-A6P" secondAttribute="leading" constant="16" id="pYo-Sb-fy5"/>
+                            <constraint firstItem="alo-H8-4hY" firstAttribute="centerX" secondItem="MPh-0M-A6P" secondAttribute="centerX" id="xcw-aT-zKG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dynamicLabel" destination="gH5-As-VDA" id="1sC-hT-EKY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXK-ve-XGw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="3"/>
+        </scene>
+    </scenes>
+</document>
